@@ -1,6 +1,6 @@
 function displayIdea(response) {
     console.log("idea generated"); 
-    new Typewriter('#book-idea', {
+    new Typewriter('#answer-container', {
         strings: response.data.answer,
         autoStart: true,
         delay: 1,
@@ -18,6 +18,10 @@ function generateIdea(event) {
     let context = "You are a book expert who loves giving advice on what people should read, and you like to share books that are not very known. Make sure to use the requester's instructions. Only answer in the following format: Name of the book by author";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
+    let ideaElement = document.querySelector("#answer-container");
+    ideaElement.classList.remove("hidden");
+    ideaElement.innerHTML = `<div class="generating">Let me think of a good book for you...</div>`
+
     console.log("Generating idea");
     console.log(`Prompt: ${prompt}`);
     console.log(`Context: ${context}`);

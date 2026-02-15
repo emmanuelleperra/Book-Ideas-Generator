@@ -20,18 +20,18 @@
          </div>
     </header>
     <main>
-        <h2>What was the last book you enjoyed?</h2>
-        <p> Tell me a book you liked, and I'll suggest another one you might enjoy.</p>
         <div class="container">
             <div class="form-container">
-                
+                <h2>What was the last book you enjoyed?</h2>
+                <p> Tell me a book you liked, and I'll suggest another one you might enjoy.</p>
+
                 <form id="book-idea-form">
                     <input type="text" placeholder="Enter a book title..." required autocomplete="off" class="instructions" id="user-instructions"/>
                     <input type="submit" class="button" />
                 </form>
+                <div class="hint">i.e. The Name of the Wind by Patrick Rothfuss</div>
             </div>
-            <div class="answer-container">
-                <h3>My recommendation:</h3>
+            <div class="answer-container hidden" id="answer-container">
                     <div class="book-idea" id="book-idea"></div>
             </div>
         </div>
