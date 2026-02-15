@@ -28,7 +28,7 @@ h1 {
 }
 
 body {
-    background-color: #F4F4F4;
+    background-color: #FFF9F5;
     font-family: "SN Pro", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
@@ -88,7 +88,12 @@ form {
 
 .button:hover {
     background-color: #FF9760;
-    transform: translateY(-1px);
+
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .answer-container {
