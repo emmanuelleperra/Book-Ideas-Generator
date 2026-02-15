@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
     <title>AI Book Idea Generator</title>
 </head>
 <body>
@@ -19,18 +20,19 @@
          </div>
     </header>
     <main>
-        <h2>What type of book are you interested in?</h2>
+        <h2>What was the last book you enjoyed?</h2>
+        <p> Tell me a book you liked, and I'll suggest another one you might enjoy.</p>
         <div class="container">
             <div class="form-container">
                 
                 <form id="book-idea-form">
-                    <input type="text" placeholder="Write a book type..." required autocomplete="off" class="instructions"/>
+                    <input type="text" placeholder="Enter a book title..." required autocomplete="off" class="instructions" id="user-instructions"/>
                     <input type="submit" class="button" />
                 </form>
             </div>
             <div class="answer-container">
-                <h3>Our book proposition:</h3>
-                    <div id="book-idea"></div>
+                <h3>My recommendation:</h3>
+                    <div class="book-idea" id="book-idea"></div>
             </div>
         </div>
     </main>
